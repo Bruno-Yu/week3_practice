@@ -1,0 +1,173 @@
+.topNav{
+  background: $stress;
+  ul{
+    display: flex;
+
+    padding-top: 13px;
+    padding-bottom: 13px;
+    li{
+      margin-right: 48px;
+      &:last-child{
+        margin-right: 0px;
+        margin-left: auto;
+      }
+    }
+    li a{
+      display: block;
+      text-decoration: none;
+      font-size: 20px;
+      line-height: 30px;
+      color:white;
+      font-weight: bold;
+    }
+  }
+  @include phone{
+    display: none;
+  }
+}
+
+
+.blog{
+  padding-top: 96px;
+  padding-bottom: 80px;
+  h1{
+    border-left: 8px solid $primary;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 72px;
+    padding-left: 16px;
+    margin-bottom: 32px;
+  }
+  &-cards{
+    li{
+      display: flex;
+      margin-bottom: 60px;
+      justify-content: space-between;
+    }
+    img{
+      display: block;
+      width: 49%;
+      height: auto;
+    }
+    .content{
+      width: 49%;
+      position: relative;
+      h2{
+        font-size: 32px;
+        line-height: 48px;
+        font-weight: 400;
+        color: $stress;
+      }
+      h4{
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 500;
+        vertical-align: middle;
+        margin-bottom: 16px;
+        span{
+          font-size: 16px;
+          line-height: 24px;
+          float:right;
+          color: #555555;
+        }
+      }
+      p{
+        font-size: 20px;
+        line-height: 30px;
+        color: #555555;
+      }
+      .more{
+        position:absolute;
+        right:0;
+        bottom:0px;
+        font-size: 36px;
+        line-height: 54px;
+        font-weight: bold;
+        color: $stress;
+      }
+    }
+  }
+  .pagination{
+    margin-top: 64px;
+    display: flex;
+    justify-content: center;
+    li{
+      border: 1px solid #555555;
+      &:nth-child(3){
+        background: #000;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+  li a{
+    display: block;
+    text-decoration: none;
+    padding: 11px 12px;
+    color:#555555;
+    font-size: 19px;
+    line-height: 29px;
+  }
+  @include tablet{
+    padding-top: 80px;
+    h1{
+      margin-bottom: 40px;
+    }
+    &-cards{
+      li{
+        margin-bottom: 24px;
+      }
+      .content{
+        h4{
+          margin-bottom: 4px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        p{
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .more{
+          font-size: 16px;
+          line-height: 24px;
+          color: #555555;
+          font-weight: 400;
+        }
+      }
+    }
+    .pagination{
+      margin-top: 64px;
+    }
+  }
+  @include phone{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h1{
+      margin-bottom: 24px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &-cards{
+      li{
+        margin-bottom: 24px;
+        display: block;
+        img{
+          width: 100%;
+        }
+        .content{
+          width: 100%;
+          p{display: none;}
+          .more{display: none;}
+        }
+      }
+    }
+    .pagination{
+      margin-top: 40px;
+      li a{
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
