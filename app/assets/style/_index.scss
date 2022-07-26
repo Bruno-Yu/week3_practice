@@ -156,7 +156,7 @@
     }
     &-cards li{
       img{
-        max-width: 348px;
+        max-width: 100%;
         height: auto;
       }
     }
@@ -305,5 +305,99 @@
         width: 100%;
       }
     }
+  }
+}
+
+.contactUs{
+  background: $secondary;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .container{
+    max-width: 636px;
+  }
+  h2{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 48px;
+    color: $stress;
+  }
+  p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  label{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 8px;
+  }
+  input{
+    display: block;
+    width: 100%;
+    border: 1px solid #000;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    padding: 6px 12px;
+  }
+  .checkbox{
+    display: flex;
+    margin-bottom: 48px;
+    input{
+      display: inline-block;
+      width: 16px;
+      align-self: start;
+      margin-top: 6px;
+    }
+    label{
+      display: inline;
+
+    }
+  }
+
+  .submit{
+    font-weight: bold;
+    color:white;
+    padding: 16px 0px;
+    text-align: center;
+    display: block;
+    width: 416px;
+    background: $primary;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+  }
+  #comments{
+    height: 136px;
+  }
+  @include tablet{
+    .container {
+      max-width: 576px;
+    }
+    .submit{
+      width: 336px;
+    }
+  }
+  @include phone{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2{
+      font-size: 24px;
+      line-height: 36px;
+    }
+    .container{
+      max-width: 100%;
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+    .checkbox{
+    margin-bottom: 24px;
+  }
+  .submit{
+    width: 100%;
+  }
+
   }
 }
