@@ -34,7 +34,7 @@ menu
   <div class="container">
     <div class="banner-content">
       <p class="subTitle">Promise-Desert 2020 早春系列</p>
-      <p class="title">看得清，才能看得遠</p>
+      <h1 class="title">看得清，才能看得遠</h1>
       <button class="buy" type="button">立即購買</button>
     </div>
   </div>
@@ -86,16 +86,18 @@ menu
     <h2>聯名設計鏡框</h2>
     <ul class="coDesign-cards">
       <li>
-        <img src="./assets/images/home-section4-1.png" alt="home-section4-1">
-        <div class="img1"></div>
-          <p>DOUBLE A+</p>
-        </img>
+        <picture>
+          <source srcset="./assets/images/home-section4-1-sm.png" media="max-width:767px">
+          <img src="/assets/images/home-section4-1.png" alt="home-section4-1">
+        </picture>
+        <p>DOUBLE A+</p>
       </li>
       <li>
-        <img src="./assets/images/home-section4-2.png" alt="home-section4-2">
-        <div class="img2"></div>
+        <picture>
+          <source srcset="./assets/images/home-section4-2-sm.png" media="max-width:767px">
+          <img src="./assets/images/home-section4-2.png" alt="home-section4-2">
+        </picture>
           <p>YOUTH</p>
-        </img>
       </li>
     </ul>
   </div>
@@ -144,15 +146,15 @@ menu
       <p>我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
       <form action="submit">
         <label for="name">姓名</label>
-        <input type="text" id="name" placeholder="陳小明">
+        <input type="text" id="name" name="name" placeholder="陳小明">
         <label for="tel">聯絡電話</label>
-        <input type="tel" id="tel" placeholder="0912-345-678">
-        <label for="mail">電子郵件</label>
-        <input type="mail" id="mail" placeholder="example@email.com">
+        <input type="tel" id="tel" name="tel" placeholder="0912-345-678">
+        <label for="email">電子郵件</label>
+        <input type="mail" id="email" name="email" placeholder="example@email.com">
         <label for="comments">意見反應</label>
-        <input type="text" id="comments" placeholder="請輸入您的意見">
+        <input type="textarea" id="comments" name="comments" placeholder="請輸入您的意見">
         <div class="checkbox">
-          <input type="checkbox" id="agree" >
+          <input type="checkbox" id="agree" name="agree" >
           <label for="agree">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
         </div>
         <button class="submit" type="button">確認送出</button></form>
@@ -173,8 +175,8 @@ menu
         <li><a href="#">常見問題</a></li>
         </ul>
         <ul class="contact">
-          <li><a href="#"><span class="material-symbols-outlined">call</span>0800-000-000</a></li>
-          <li><a href="#"><span class="material-symbols-outlined">mail</span>glasses@business.com</a></li>
+          <li><a href="tel:+0800-000-000"><span class="material-symbols-outlined">call</span>0800-000-000</a></li>
+          <li><a href="mailto:glasses@business.com"><span class="material-symbols-outlined">mail</span>glasses@business.com</a></li>
         </ul>
       </div>
       <ul class="footer-top-socialMedias">
