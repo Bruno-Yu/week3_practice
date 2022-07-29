@@ -1,125 +1,4 @@
 
-*,*::before, *::after{
-  box-sizing: border-box;
-  // outline: 1px solid black;
-}
-img{
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
-body{
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Source Han Sans TW", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size:  $font-size-base;
-  line-height: 1.5;
-  color:black;
-}
-
-
-h2{
-  font-size:  $font-size-base * 3;
-  font-weight: bold;
-}
-h3{
-  font-size:  $font-size-base * 1.75;
-}
-h4{
-  font-size:  $font-size-base * 1.5;;
-}
-h5{
-  font-size:  $font-size-base * 1.25;
-}
-// .text-sm{
-//   font-size:  $font-size-base*0.875;
-// }
-
-// .text-white{
-//   color:white;
-// }
-// .text-primary{
-//   color:$primary;
-// }
-// .text-stress{
-//   color:$stress;
-// }
-
-// bg
-// .bg-primary{
-//   background: $primary;
-// }
-// .bg-secondary{
-//   background: $secondary;
-// }
-
-// utilities
-
-
-
-// .d-flex{
-//   display: flex;
-// }
-
-.p-4{
-  padding: 13px;
-}
-
-.py-4{
-  padding: 16px 0px;
-}
-.py-20{
-  padding: 80px 0px;
-}
-
-// me
-.me-12{
-  margin-right: 48px;
-}
-.ms-auto{
-  margin-left: auto;
-}
-.ms-16{
-  margin-left: 64px;
-}
-
-// mb
-.mb-1{
-  margin-bottom: 4px;
-}
-.mb-2{
-  margin-bottom: 8px;
-}
-.mb-4{
-  margin-bottom: 16px;
-}
-.mb-8{
-  margin-bottom: 32px;
-}
-.mb-12{
-  margin-bottom: 48px;
-}
-.mb-18{
-  margin-bottom: 72px;
-}
-
-// components
-// header
-
-.container{
-  padding: 0px 15px;
-  max-width: 1296px;
-  margin: 0 auto;
-}
-@include tablet{    
-  .container{
-    max-width: 696px;
-  }
-}
-@include phone{
-  .container{
-    max-width: 348px;
-  }
-}
-
 .header{
   background: $primary;
   .container{
@@ -153,14 +32,17 @@ h5{
       line-height: 1.5;
       color:#FFFF;
       margin: 25px 0px 25px 64px;
+      &:hover{
+        font-weight: 700;
+      }
     }
   }
 }
 @include phone{
   .header{
-    .container{
-      position: relative;
-    }
+    // .container{
+    //   position: relative;
+    // }
     label{
       display: block;
       order:2;
@@ -172,10 +54,12 @@ h5{
     max-height: 0;
     overflow: hidden;
     position: absolute;
+    width: 100%;
     top: 70px; 
     transition: 1s; 
     z-index:-20;
-    right: 0px;
+    // right: 0px;
+    left: 0px;
 
     li {
     text-align: center;
@@ -224,6 +108,9 @@ h5{
           white-space: nowrap;
           display: block;
           margin-right: 3rem;
+          &:hover{
+            font-weight: 700;
+          }
         }
       }
       .contact{
@@ -232,10 +119,16 @@ h5{
         font-size: 36px; 
         line-height: 54px;
         margin-bottom: 8px;
+        &:hover{
+          font-weight: 700;
+        }
         span{
           vertical-align: middle;
           margin-right: 22px;
           font-size: 36px;
+          &:hover{
+          font-weight: 700;
+        }
         }
   }
       }
@@ -264,7 +157,10 @@ h5{
       align-items: center;
       li a{
         margin-left: 48px;
-        display: block;     
+        display: block;  
+        &:hover{
+          font-weight: 700;
+        }
       }
     }
   }

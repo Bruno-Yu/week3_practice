@@ -3,8 +3,13 @@
   background: url('../images/home-header.png');
   background-position: center center;
   background-size: cover;
-  padding-top: 296px;
-  padding-bottom: 296px;
+
+  .container{
+    height: 787px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
   &-content{
     color: $stress;
     text-align: right;
@@ -25,18 +30,22 @@
       font-weight: 500;
       font-size: 20px;
       line-height: 30px;
-      font-size: 20px;
-      line-height: 30px;
       padding: 6px 12px ;
       border:none;
+      &:hover{
+        background: lighten($primary,10%);
+        font-weight: 700;
+      }
     }
   }
   @include phone{
     background:  url('../images/home-header-sm.png');
       background-position: center center;
   background-size: cover;
-    padding-top: 144px;
-    padding-bottom: 144px;
+    
+    .container{
+      height: 396px;
+    }
     .subTitle{
     font-size: 16px;
     line-height: 24px;
@@ -65,7 +74,8 @@
     justify-content: space-between;
   }
   &-cards li{
-    width: 23.6%;
+    // width: 23.6%;原本寫法
+    width: calc((100% - 72px) / 4);
     text-align: center;
     img{
       width: 83.83px;
@@ -79,7 +89,7 @@
       margin-bottom: 8px;
     }
     p{
-      text-align-last: left;
+      text-align: left;
     }
   }
   @include tablet{
@@ -87,7 +97,8 @@
       row-gap: 49px;
     }
     &-cards li{
-      width: 48.275%;
+      // width: 48.275%;
+      width: calc( (100% - 24px) / 2 );
     }
   }
   @include phone{
@@ -123,7 +134,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     li{
-      width: 32%;
+      // width: 32%;
+      width: calc(( 100% - 48px )/3);
       text-align: center;
       p{
         margin-top: 8px;
@@ -141,7 +153,6 @@
         width: 100%;
         img{
           max-width: 316px;
-          height:auto;
         }
       }
     }
@@ -153,12 +164,6 @@
       font-size: 24px;
       line-height: 36px;
       margin-bottom: 24px;
-    }
-    &-cards li{
-      img{
-        max-width: 100%;
-        height: auto;
-      }
     }
   }
 }
@@ -180,16 +185,6 @@
     justify-content: center;
     li{
       width: 50%;
-      img{
-        width: 100%;
-        height: auto;
-      }
-      .img1{
-        display: none;
-      }
-      .img2{
-        display: none;
-      }
       p{
         text-align: center;
         background-color: #fff;
@@ -203,8 +198,6 @@
   }
   @include tablet{
   background-image: url('../images/index-bg-md.png');
-  background-position: center;
-  background-size: cover;
     &-cards{
       row-gap:24px;
       li{
@@ -216,31 +209,10 @@
     padding-top: 40px;
     padding-bottom: 40px;
     background-image: url('../images/index-bg-sm.png');
-      background-position: center;
-  background-size: cover;
       h2{
       font-size: 24px;
       line-height: 36px;
     }
-  &-cards li{
-    width: 100%;
-  img{
-    display: none;
-  }
-  .img1, .img2{
-    display: block;
-    background-image: url('../images/home-section4-1-sm.png');
-    background-size: cover;
-    background-position: center;
-    max-width: 100%;
-    height: 240px;
-  }
-  .img2{
-    background-image: url('../images/home-section4-2-sm.png');
-        background-size: cover;
-    background-position: center;
-  }
-  }
   }
 }
 
@@ -259,12 +231,15 @@
     justify-content: space-between;
 
     li{
-      width: 23.61%;
+      // width: 23.61%;
+      width: calc((100% - 72px ) / 4);
       box-shadow: 0px 2px 6px #00000029;
       border: 1px solid #DEE2E6;
       border-radius: 4px;
       height: 511px;
       position: relative;
+      // display: flex;
+      // flex-direction: column;
       .content{
         padding: 16px;
         .name{
@@ -275,6 +250,7 @@
       .date{
         bottom: 16px;
         left:16px;
+        // justify-self: flex-end;
         position: absolute;
         color:#707070;
         font-size: 14px;
@@ -287,7 +263,8 @@
     &-cards {
       row-gap:24px;
       li{
-      width: 48.27%;
+      // width: 48.27%;
+      width: calc((100% - 24px) / 2);
       }
     }
   }
@@ -368,6 +345,11 @@
     margin-left: auto;
     margin-right: auto;
     border: none;
+    &:hover{
+      font-weight: 900;
+      font-size: 18px;
+      background: lighten($primary,10% );
+    }
   }
   #comments{
     height: 136px;
