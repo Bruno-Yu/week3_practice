@@ -237,10 +237,16 @@
       border: 1px solid #DEE2E6;
       border-radius: 4px;
       height: 511px;
-      position: relative;
-      // display: flex;
-      // flex-direction: column;
+      // position: relative;
+      display: flex;
+      flex-direction: column;
+      // img{
+      //   flex:0 0;
+      // }
       .content{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
         padding: 16px;
         .name{
           font-weight: bold;
@@ -248,10 +254,13 @@
         }
       }
       .date{
-        bottom: 16px;
-        left:16px;
+        // float: bottom;
+        margin-top: auto;
+        display: block;
+        // bottom: 16px;
+        // left:16px;
         // justify-self: flex-end;
-        position: absolute;
+        // position: absolute;
         color:#707070;
         font-size: 14px;
         line-height: 21px;
